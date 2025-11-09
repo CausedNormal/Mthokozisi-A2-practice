@@ -1,5 +1,5 @@
 import { DataTable, List } from 'react-admin';
-import { Edit, SimpleForm, TextInput } from 'react-admin';
+import { Edit, SimpleForm, TextInput, Create } from 'react-admin';
 import { Show, SimpleShowLayout, TextField } from 'react-admin';
 
 export const GenreList = () => (
@@ -24,10 +24,10 @@ export const GenreEdit = () => (
 
 
 // take out <TextInput source="id" /> since React doe ths automatically 
+// remember to put create in the imports: import { Edit, SimpleForm, TextInput, """Create """"} from 'react-admin';
 export const GenreCreate = () => (
     <Create>
         <SimpleForm>
-            <TextInput source="id" />
             <TextInput source="name" />
         </SimpleForm>
     </Create>
