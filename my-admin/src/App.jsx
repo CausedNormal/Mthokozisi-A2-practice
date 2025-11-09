@@ -27,7 +27,7 @@ const App = () => (                                                             
 //6. go to website and click on a row/edit button, then inspect code then Copy the code from GenreEdit to make GenreCreate then import it to App.jsx and change 
 //7. Add genreEdit to import {GenreList, GenreEdit} from "./Genre.jsx"; and change edit = {EditGuesser} -> edit = {GenreEdit}
 //8. add show={ShowGuesser} as placeholder until we click on the website then inspect code to copy to Genre.jsx 
-//9. For login page 
+//9. For login page:  const {dataProvider, authProvider} = await createTrailbaseProvider(TrailbaseURL) ->  <Admin dataProvider={dataProvider} authProvider = {authProvider}>
 
 
 
