@@ -1,0 +1,5 @@
+// author Update Access API
+EXISTS(      SELECT 1   FROM Account AS a, users, Author AS au, Profile AS pr   WHERE     a.id = pr.accountID AND pr.id = au.profileID AND a.email = users.email AND users.id = _USER_.id AND _ROW_.id = a.id    )
+
+// author Create Access: API
+EXISTS(   SELECT 1    FROM users    JOIN Account ON Account.email = users.email    JOIN Admin ON Admin.id = Account.id    WHERE users.id = _USER_.id )
