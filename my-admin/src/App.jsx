@@ -13,7 +13,7 @@ const TrailbaseURL = "https://special-adventure-g45wgj656g6j3v4gq-4000.app.githu
 const {dataProvider, authProvider} = await createTrailbaseProvider(TrailbaseURL)         // Typed ourselves function from React + put await before createTrailbase
 
 const App = () => (                                                                     // Took from src/admin/index.tsx from Marmalab
-  <Admin dataProvider={dataProvider} theme={bwLightTheme} darkTheme={bwDarkTheme}>                                                                                              
+  <Admin dataProvider={dataProvider} authProvider = {authProvider} theme={bwLightTheme} darkTheme={bwDarkTheme}>                                                                                              
     <Resource name="Author" list={AuthorList} edit = {AuthorEdit} create = {AuthorCreate} show = {AuthorShow}/>   
     <Resource name="Genre" list={GenreList} edit = {GenreEdit} create = {GenreCreate} show={GenreShow}/>                               
   </Admin>
@@ -27,7 +27,7 @@ const App = () => (                                                             
 //6. go to website and click on a row/edit button, then inspect code then Copy the code from GenreEdit to make GenreCreate then import it to App.jsx and change 
 //7. Add genreEdit to import {GenreList, GenreEdit} from "./Genre.jsx"; and change edit = {EditGuesser} -> edit = {GenreEdit}
 //8. add show={ShowGuesser} as placeholder until we click on the website then inspect code to copy to Genre.jsx 
-//9. 
+//9. For login page 
 
 
 

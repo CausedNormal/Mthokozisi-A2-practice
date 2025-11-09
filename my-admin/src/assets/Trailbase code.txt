@@ -13,3 +13,14 @@ EXISTS(   SELECT Admin AS ad, Account as a   WHERE a.email = users.email AND use
 // Genre Delete Access: API
 EXISTS(   SELECT Admin AS ad, Account as a   WHERE a.email = users.email AND users.id = _USER_.ID AND _ROW_.id = a.id AND a.id = ad.id)
 
+//Admin
+dan@example.com   danPassword
+
+//User
+edward@example.com  randomPassword
+
+//Author
+gwen@example.com   gwenPassword
+
+//Reviewer
+bob@example.com    password1234
