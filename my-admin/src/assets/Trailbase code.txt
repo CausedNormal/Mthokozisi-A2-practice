@@ -3,3 +3,13 @@ EXISTS(      SELECT 1   FROM Account AS a, users, Author AS au, Profile AS pr   
 
 // author Create Access: API
 EXISTS(   SELECT 1    FROM users    JOIN Account ON Account.email = users.email    JOIN Admin ON Admin.id = Account.id    WHERE users.id = _USER_.id )
+
+// Genre Update Access API
+EXISTS(   SELECT Admin AS ad, Account as a   WHERE a.email = users.email AND users.id = _USER_.ID AND _ROW_.id = a.id AND a.id = ad.id)
+
+// Genre Create Access: API
+EXISTS(   SELECT Admin AS ad, Account as a   WHERE a.email = users.email AND users.id = _USER_.ID AND _ROW_.id = a.id AND a.id = ad.id)
+
+// Genre Delete Access: API
+EXISTS(   SELECT Admin AS ad, Account as a   WHERE a.email = users.email AND users.id = _USER_.ID AND _ROW_.id = a.id AND a.id = ad.id)
+

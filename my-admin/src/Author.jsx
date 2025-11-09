@@ -37,7 +37,7 @@ export const AuthorEdit = () => (
 
 // have to take out <TextInput source="id" /> from AuthorCreate because will gve errors
 // copy this code from edit and just change <Edit> and </Edit> -> <Create> and </Create>
-// LEAVE THE ID out for Create because it autmaticaly increments
+// LEAVE THE ID out for Create/show because it autmaticaly increments
 export const AuthorCreate = () => (
     <Create>
         <SimpleForm>
